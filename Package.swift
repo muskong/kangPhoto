@@ -1,17 +1,20 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "KangPhoto",
-    platforms: [.macOS(.v12)],
+    platforms: [
+        .macOS(.v11)
+    ],
     products: [
         .executable(name: "KangPhoto", targets: ["KangPhoto"])
     ],
+    dependencies: [],
     targets: [
         .executableTarget(
             name: "KangPhoto",
-            path: ".",
-            sources: ["main.swift", "AppDelegate.swift", "MouseTrackingView.swift"]
+            dependencies: [],
+            path: "KangPhoto/Sources"
         )
     ]
 )
